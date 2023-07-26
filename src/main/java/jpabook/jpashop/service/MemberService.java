@@ -47,5 +47,10 @@ public class MemberService {    // 비즈니스 로직, 트랜잭션 처리
     }
 
 
+    @Transactional
+    public void update(Long id, String name) {
+        Member member = memberRepository.findOne(id);
+        member.setName(name);
 
+    }
 }
