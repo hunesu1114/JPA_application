@@ -7,12 +7,15 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
     properties:
       hibernate:
         #show_sql: true       system.out으로 찍음
         format_sql: true
 
+  output:
+    ansi:
+      enabled: always
 
 logging.level:
   org.hibernate.SQL: debug
